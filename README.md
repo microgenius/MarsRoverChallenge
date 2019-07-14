@@ -1,6 +1,6 @@
 # MarsRover
 
-An implementation of the MarsRover coding challenge
+dotnet core (C#) implementation of the MarsRover coding challenge
 
 ## Mars Rovers
 
