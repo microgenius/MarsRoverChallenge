@@ -5,15 +5,22 @@ language: csharp
 mono: none
 dotnet: 2.2.105
 
+global:
+    - DOTNET_SKIP_FIRST_TIME_EXPERIENCE=true
+    - DOTNET_CLI_TELEMETRY_OPTOUT=1
+
 script:
   - dotnet restore
   - dotnet build
+  - dotnet publish -c Release -r win10-x64
 
 deploy:
   provider: releases
   api_key:
     secure: $GITHUB_TOKEN
-  file: "*.exe"
+  file: 
+    - MarsRover.dll
+    - MarsRover.exe
   on:
     repo: microgenius/EarthquakeDataCrawler
     branch: master
