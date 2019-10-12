@@ -21,6 +21,6 @@ deploy:
     - MarsRover.dll
   skip_cleanup: true
   on:
-    repo: microgenius/EarthquakeDataCrawler
+    repo: microgenius/MarsRoverChallenge
     branch: master
     tags: true
