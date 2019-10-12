@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/microgenius/MarsRoverChallenge.svg?branch=master)](https://travis-ci.org/microgenius/MarsRoverChallenge)
+
 # MarsRover
 
 dotnet core (C#) implementation of the MarsRover coding challenge
