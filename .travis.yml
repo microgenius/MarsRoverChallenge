@@ -12,7 +12,6 @@ global:
 script:
   - dotnet restore
   - dotnet build
-  - dotnet publish -c Release -r win10-x64
 
 deploy:
   provider: releases
@@ -20,7 +19,7 @@ deploy:
     secure: $GITHUB_TOKEN
   file: 
     - MarsRover.dll
-    - MarsRover.exe
+  skip_cleanup: true
   on:
     repo: microgenius/EarthquakeDataCrawler
     branch: master
