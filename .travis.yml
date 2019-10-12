@@ -1,0 +1,20 @@
+sudo: required
+dist: trusty
+
+language: csharp
+mono: none
+dotnet: 2.2.0
+
+script:
+  - dotnet restore
+  - dotnet build
+
+deploy:
+  provider: releases
+  api_key:
+    secure: $GITHUB_TOKEN
+  file: "*.exe"
+  on:
+    repo: microgenius/EarthquakeDataCrawler
+    branch: master
+    tags: true
