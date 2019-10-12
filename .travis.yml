@@ -17,9 +17,9 @@ deploy:
   provider: releases
   api_key:
     secure: $GITHUB_TOKEN
-  file: 
-    - MarsRover.dll
+  file: "**/MarsRover.dll"
   skip_cleanup: true
+  file_glob: true
   on:
     repo: microgenius/MarsRoverChallenge
     branch: master
